@@ -9,7 +9,7 @@
   <style>
     body {
       background: #101410;
-      color: ##FF5F1F;
+      color: #FF5F1F;
       font-family: monospace;
       padding: 30px;
     }
@@ -55,8 +55,8 @@ type help for the best surprise .
 
         if (command === "help") {
           screen.textContent +=
-            "try: memories, letter, flowers, bucketlist   about";
-        } else if (command === "memoryik") {
+            "try: memories, letter, flowers, about";
+        } else if (command === "memories") {
           screen.textContent +=
             "to the best memories i've ever shared ♡";
         } else if (command === "letter") {
@@ -70,7 +70,7 @@ type help for the best surprise .
             "you make my world glitter";
         } else if (command !== "") {
           screen.textContent +=
-            "unknown command. type help to explore ♡";
+            "that doesn't work u silly...";
         }
 
         input.value = "";
