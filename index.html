@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for you ♡</title>
+
+  <style>
+    body {
+      background: #101410;
+      color: ##FF5F1F;
+      font-family: monospace;
+      padding: 30px;
+    }
+
+    #screen {
+      white-space: pre-wrap;
+      line-height: 1.7;
+    }
+
+    input {
+      background: transparent;
+      color: #b7f7bd;
+      border: none;
+      outline: none;
+      font: inherit;
+      width: 75%;
+    }
+
+    .prompt {
+      color: #f4b6d2;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="screen">welcome, my silly boy ♡
+
+type help for the best surprise .
+</div>
+
+  <span class="prompt">you@birthday:~$ </span>
+  <input id="command" autofocus autocomplete="off">
+
+  <script>
+    const screen = document.getElementById("screen");
+    const input = document.getElementById("command");
+
+    input.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        const command = input.value.trim().toLowerCase();
+
+        screen.textContent += "\n\n> " + input.value + "\n";
+
+        if (command === "help") {
+          screen.textContent +=
+            "try: memories, letter, flowers, bucketlist   about";
+        } else if (command === "memoryik") {
+          screen.textContent +=
+            "to the best memories i've ever shared ♡";
+        } else if (command === "letter") {
+          screen.textContent +=
+            "there is definitely no letter awaiting . ";
+        } else if (command === "flowers") {
+          screen.textContent +=
+            "since i cant give you flowers irl cuz of suspicious family";
+        } else if (command === "about") {
+          screen.textContent +=
+            "you make my world glitter";
+        } else if (command !== "") {
+          screen.textContent +=
+            "unknown command. type help to explore ♡";
+        }
+
+        input.value = "";
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+    });
+  </script>
+</body>
+</html>
